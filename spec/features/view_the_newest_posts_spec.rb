@@ -7,4 +7,11 @@ RSpec.feature "View the newest posts", type: :feature do
 
     expect(page).to have_css("article header", text: post.title)
   end
+
+  scenario "when there are more than 10 posts" do
+    11.times { Post.make! }
+
+    visit root_path
+    expect(page).to have_css(".Post", count: 10)
+  end
 end
