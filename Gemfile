@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -48,3 +48,4 @@ end
 gem 'capybara', group: [:test]
 gem 'machinist', group: [:test]
 gem 'slim-rails'
+gem 'rails-assets-semantic-ui'
