@@ -5,7 +5,8 @@ RSpec.feature "View the newest posts", type: :feature do
     post = Post.make!
     visit root_path
 
-    expect(page).to have_css("article header", text: post.title)
+    expect(page).to have_css(".Post h2", text: post.title)
+    expect(page).to have_css(".Post time")
   end
 
   scenario "when there are more than 10 posts" do
