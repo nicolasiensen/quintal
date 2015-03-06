@@ -47,5 +47,6 @@ end
 
 gem 'capybara', group: [:test]
 gem 'machinist', group: [:test]
+gem 'shoulda-matchers', require: false, group: [:test]
 gem 'slim-rails'
 gem 'rails-assets-semantic-ui'
