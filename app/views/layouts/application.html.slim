@@ -6,4 +6,12 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    = yield
+    .ui.page.grid
+      .sixteen.wide.column
+        .ui.pointing.menu
+          - categories.each do |category|
+            = category_link(category)
+
+    .ui.page.grid
+      .ten.wide.column
+        = yield

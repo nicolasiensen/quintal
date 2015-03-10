@@ -1,7 +1,7 @@
 require 'machinist/active_record'
 
 Post.blueprint do
-  title { "My post" }
+  title { "My post #{sn}" }
   published_at { Time.now }
   category_id { Category.make!.id }
 end
