@@ -5,4 +5,8 @@ class PostsController < ApplicationController
     @category = Category.find_by(slug: params[:category_slug])
     @posts = @posts.where(category_id: @category.id) if @category.present?
   end
+
+  def show
+    @post = Post.find(params[:id])
+  end
 end

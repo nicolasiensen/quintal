@@ -13,9 +13,9 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   # resources :categories, only: [:show], path: 'c'
-  resources :posts do
+  resources :posts, only: [:show] do
     collection do
-      get ':category_slug' => 'posts#index', as: :category
+      get 'c/:category_slug' => 'posts#index', as: :category
     end
   end
 

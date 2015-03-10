@@ -1,0 +1,11 @@
+article.Post
+  header
+    h2= @post.title
+    time= l @post.published_at, format: :short
+    .Category= link_to @post.category.name, category_posts_path(@post.category)
+    
+  = @post.body
+
+  footer
+    - @post.tags.each do |tag|
+      span= tag.name

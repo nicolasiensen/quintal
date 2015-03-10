@@ -4,9 +4,15 @@ Post.blueprint do
   title { "My post #{sn}" }
   published_at { Time.now }
   category_id { Category.make!.id }
+  body { "My post body #{sn}" }
+  tags(3)
 end
 
 Category.blueprint do
   name { "Category #{sn}" }
   slug { "category-#{sn}" }
+end
+
+Tag.blueprint do
+  name { "Tag #{sn}" }
 end
