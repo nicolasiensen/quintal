@@ -8,5 +8,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @category = @post.category
+    @tags = @post.tags
+    @comments = @post.comments.order(created_at: :desc)
   end
 end

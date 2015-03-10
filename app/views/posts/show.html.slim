@@ -2,10 +2,18 @@ article.Post
   header
     h2= @post.title
     time= l @post.published_at, format: :short
-    .Category= link_to @post.category.name, category_posts_path(@post.category)
-    
+    .Category= link_to @category.name, category_posts_path(@category)
+
   = @post.body
 
   footer
-    - @post.tags.each do |tag|
+    - @tags.each do |tag|
       span= tag.name
+
+    - if @comments.empty?
+      .Comments.Comments--empty
+        | Seja o primeiro a comentar este post!
+    - else
+      - @comments.each do |comment|
+        .Comments-comment
+          = comment.body

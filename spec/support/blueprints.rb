@@ -16,3 +16,7 @@ end
 Tag.blueprint do
   name { "Tag #{sn}" }
 end
+
+Comment.blueprint do
+  body { "My comment #{sn}" }
+end
