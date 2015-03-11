@@ -16,4 +16,6 @@ article.Post
     - else
       - @comments.each do |comment|
         .Comments-comment
-          = comment.body
+          .Comments-comment-user= comment.user.name
+          time.Comments-comment-createdAt= l comment.created_at, format: :short
+          .Comments-comment-body= comment.body

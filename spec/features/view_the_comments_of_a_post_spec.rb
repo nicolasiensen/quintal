@@ -15,6 +15,8 @@ RSpec.feature "View the comments of a post", type: :feature do
 
     expect(page).to_not have_css(".Comments.Comments--empty")
     expect(page).to have_css(".Comments-comment", text: comment.body)
+    expect(page).to have_css(".Comments-comment-user", text: comment.user.name)
+    expect(page).to have_css(".Comments-comment-createdAt", text: I18n.l(comment.created_at, format: :short))
   end
 
   scenario "when there is more than one comment" do

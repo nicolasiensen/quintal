@@ -19,4 +19,9 @@ end
 
 Comment.blueprint do
   body { "My comment #{sn}" }
+  user_id { User.make!.id }
+end
+
+User.blueprint do
+  name { "User #{sn}" }
 end
