@@ -6,4 +6,6 @@ RSpec.describe Post, type: :model do
   it { should have_many :comments }
   it { should validate_presence_of :title }
   it { should validate_presence_of :category_id }
+  it { should validate_presence_of :slug }
+  it { should validate_uniqueness_of :slug }
 end

@@ -6,6 +6,7 @@ Post.blueprint do
   category_id { Category.make!.id }
   body { "My post body #{sn}" }
   tags(3)
+  slug { "my-post-#{sn}" }
 end
 
 Category.blueprint do
