@@ -25,4 +25,5 @@ end
 
 User.blueprint do
   name { "User #{sn}" }
+  email { "user#{sn}@trashmail.com" }
 end
