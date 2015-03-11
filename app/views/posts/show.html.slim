@@ -14,8 +14,4 @@ article.Post
       .Comments.Comments--empty
         | Seja o primeiro a comentar este post!
     - else
-      - @comments.each do |comment|
-        .Comments-comment
-          .Comments-comment-user= comment.user.name
-          time.Comments-comment-createdAt= l comment.created_at, format: :short
-          .Comments-comment-body= comment.body
+      = render @comments
