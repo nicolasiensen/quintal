@@ -6,7 +6,10 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    - categories.each do |category|
-      = category_link(category)
+    .container
+      .clearfix
+        .col.col-6
+          - categories.each do |category|
+            = category_link(category)
 
-    = yield
+          = yield
