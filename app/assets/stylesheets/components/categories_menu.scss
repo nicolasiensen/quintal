@@ -1,0 +1,16 @@
+.CategoriesMenu {
+  text-align: center;
+
+  a {
+    color: $gray;
+    border-bottom: $gray 3px solid;
+    padding: .25em 1em;
+    display: inline-block;
+
+    &.active, &:hover {
+      border-color: $green;
+      text-decoration: none;
+      color: darken($gray, 20%);
+    }
+  }
+}
