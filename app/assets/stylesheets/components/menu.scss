@@ -1,0 +1,44 @@
+.Menu {
+  $menu-border-size: 1px;
+  border-bottom: $gray $menu-border-size solid;
+
+  .Menu-title {
+    float: left;
+    font-family: 'Clicker Script', cursive;
+    font-size: 3em;
+    line-height: 32px;
+
+    a {
+      color: #333;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .Menu-categories {
+    float: right;
+    text-align: right;
+
+    a {
+      color: $gray;
+      font-weight: 100;
+      letter-spacing: .5px;
+      border-bottom: $gray $menu-border-size solid;
+      padding: .25em 1em;
+      display: inline-block;
+      margin-bottom: -$menu-border-size;
+
+      &.active, &:hover {
+        border-color: $green;
+        text-decoration: none;
+        color: darken($gray, 30%);
+      }
+    }
+  }
+
+  .Menu-clearfix {
+    clear: both;
+  }
+}

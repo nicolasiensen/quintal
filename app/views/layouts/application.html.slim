@@ -8,9 +8,14 @@ html
   body
     .container.mt3
       .clearfix
-        .sm-col.sm-col-12.md-col-12.lg-col-8
-          .CategoriesMenu.mb3
-            - categories.each do |category|
-              = category_link(category)
-
+        .col.col-12.px2
+          .Menu.mb4
+            .Menu-title
+              = link_to "Quintal", root_path
+            .Menu-categories
+              - categories.each do |category|
+                = category_link(category)
+            .Menu-clearfix
+      .clearfix
+        .sm-col.sm-col-12.md-col-12.lg-col-8.px2
           = yield
