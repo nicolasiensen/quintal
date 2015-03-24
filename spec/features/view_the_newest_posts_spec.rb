@@ -21,9 +21,9 @@ RSpec.feature "View the newest posts", type: :feature do
     expect(page.body.index(post2.title)).to be < page.body.index(post3.title)
   end
 
-  scenario "when there are more than 10 posts" do
-    11.times { Post.make! }
+  scenario "when there are more than 3 posts" do
+    4.times { Post.make! }
     visit root_path
-    expect(page).to have_css(".Post", count: 10)
+    expect(page).to have_css(".Post", count: 3)
   end
 end
