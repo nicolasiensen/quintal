@@ -1,4 +1,7 @@
-article.Post
+article.Post.mb4.bg-white
   header
-    h2= link_to post.title, post
     time= l post.published_at, format: :short
+    h2= link_to post.title, post
+
+  .Post-body
+    = raw simple_format(post.body)
