@@ -51,3 +51,4 @@ gem 'shoulda-matchers', require: false, group: [:test]
 gem 'slim-rails'
 gem 'rails-assets-basscss'
 gem 'bourbon'
+gem 'rails_12factor'
