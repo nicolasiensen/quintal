@@ -4,7 +4,7 @@ article.Post
     time= l @post.published_at, format: :short
     .Category= link_to @category.name, category_posts_path(@category)
 
-  = @post.body
+  = raw simple_format(@post.body)
 
   footer
     - @tags.each do |tag|
