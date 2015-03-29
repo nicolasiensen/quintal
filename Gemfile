@@ -1,7 +1,5 @@
 ruby '2.2.0'
-
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -51,7 +49,6 @@ gem 'capybara', group: [:test]
 gem 'machinist', group: [:test]
 gem 'shoulda-matchers', require: false, group: [:test]
 gem 'slim-rails'
-gem 'rails-assets-basscss'
 gem 'bourbon'
 gem 'rails_12factor'
 gem 'puma'

@@ -1,0 +1,9 @@
+$pre-background-color: #ccc;
+$link-color: $green;
+$button-background-color: $green;
+
+@import 'basscss/scss/_base-reset.scss';
+@import 'basscss/scss/_base-typography.scss';
+@import 'basscss/scss/_color-base.scss';
+@import 'basscss/scss/_utility-white-space.scss';
+@import 'basscss/scss/_grid.scss';

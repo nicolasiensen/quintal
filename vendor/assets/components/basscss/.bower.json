@@ -1,0 +1,34 @@
+{
+  "name": "basscss",
+  "version": "5.2.0",
+  "homepage": "https://github.com/jxnblk/basscss",
+  "authors": [
+    "Brent Jackson <jxnblk@gmail.com>"
+  ],
+  "description": "Low-level CSS Toolkit",
+  "main": "./css/basscss.css",
+  "keywords": [
+    "CSS",
+    "OOCSS",
+    "Utility",
+    "Framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "5.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.2.0",
+    "commit": "909bc41df506f9add3f344ec5811f517f89bb166"
+  },
+  "_source": "git://github.com/jxnblk/basscss.git",
+  "_target": "~5.2.0",
+  "_originalSource": "basscss",
+  "_direct": true
+}
