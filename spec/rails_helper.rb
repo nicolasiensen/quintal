@@ -23,6 +23,8 @@ require 'shoulda/matchers'
 # require only the support files necessary.
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
+ActiveRecord::Base.logger.level = Logger::ERROR
+
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
