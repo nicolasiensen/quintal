@@ -56,3 +56,4 @@ gem 'bourbon'
 gem 'rails_12factor'
 gem 'puma'
 gem 'kaminari'
+gem "codeclimate-test-reporter", group: :test, require: nil
