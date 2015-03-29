@@ -1,4 +1,5 @@
 {<img src="https://codeclimate.com/github/nicolasiensen/quintal/badges/gpa.svg" />}[https://codeclimate.com/github/nicolasiensen/quintal]
+{<img src="https://codeclimate.com/github/nicolasiensen/quintal/badges/gpa.svg" />}[https://codeclimate.com/github/nicolasiensen/quintal]
 
 == README
 
