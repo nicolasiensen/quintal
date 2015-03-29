@@ -1,1 +1,7 @@
 = render @posts
+
+hr
+
+.PagesIndex
+  = link_to_previous_page @posts, "Anterior", class: ["left", "button", "button-transparent"]
+  = link_to_next_page @posts, "Próximo", class: ["right", "button", "button-transparent"]
