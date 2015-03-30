@@ -2,6 +2,6 @@
 
 hr
 
-.PagesIndex
-  = link_to_previous_page @posts, "Anterior", class: ["left", "button", "button-transparent"]
-  = link_to_next_page @posts, "Próximo", class: ["right", "button", "button-transparent"]
+.PostsPagination.mb4
+  = link_to_previous_page @posts, "", class: ["PostsPagination-previous", :fa, 'fa-chevron-circle-left'], title: "Mais recentes"
+  = link_to_next_page @posts, "", class: ["PostsPagination-next", :fa, 'fa-chevron-circle-right'], title: "Mais antigos"
