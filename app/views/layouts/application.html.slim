@@ -6,6 +6,7 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
+    #fb-root
     .container.mt3.mb3
       .clearfix
         .col.col-12.px2
@@ -17,5 +18,14 @@ html
                 = category_link(category)
             .Menu-clearfix
       .clearfix
-        .sm-col.sm-col-12.md-col-12.lg-col-8.px2
+        .sm-col.sm-col-12.md-col-8.lg-col-8.px2
           = yield
+
+        .sm-col.sm-col-12.md-col-4.lg-col-4.px2
+          .About.mb4
+            = image_tag("fe.jpg", class: "About-image")
+            .About-description Editado por
+            .About-title Fê Iensen
+
+          .overflow-hidden
+            .fb-like data-href="https://www.facebook.com/blogquintal" data-width="309px" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"
