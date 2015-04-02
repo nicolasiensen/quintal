@@ -1,7 +1,12 @@
-article.Post.mb4.bg-white
-  header
-    time= l post.published_at, format: :short
-    h2= link_to post.title, post
+article.Post.mb4
+  header.Post-header
+    h2.Post-title= link_to post.title, post
+    .Post-info
+      = l post.published_at, format: :short
+      |, &nbsp;
+      = link_to post.category.name, category_posts_path(post.category)
+    - post.tags.each do |tag|
+      span.Post-tag= tag.name
 
   .Post-body
     = raw simple_format(post.body)

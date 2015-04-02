@@ -1,17 +1,9 @@
-article.Post
-  header
-    h2= @post.title
-    time= l @post.published_at, format: :short
-    .Category= link_to @category.name, category_posts_path(@category)
+= render @post
 
-  = raw simple_format(@post.body)
-
-  footer
-    - @tags.each do |tag|
-      span= tag.name
-
-    - if @comments.empty?
-      .Comments.Comments--empty
-        | Seja o primeiro a comentar este post!
-    - else
-      = render @comments
+.CommentList
+  h2 Comentários
+  - if @comments.empty?
+    .CommentList.CommentList-empty
+      | Seja o primeiro a comentar este post!
+  - else
+    = render @comments
