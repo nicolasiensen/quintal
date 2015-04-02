@@ -2,7 +2,7 @@ article.Post.mb4
   header.Post-header
     h2.Post-title= link_to post.title, post
     .Post-info
-      = l post.published_at, format: :short
+      time= l post.published_at, format: :short
       |, &nbsp;
       = link_to post.category.name, category_posts_path(post.category)
     - post.tags.each do |tag|

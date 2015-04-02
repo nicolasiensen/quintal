@@ -3,7 +3,7 @@
 .CommentList
   h2 Comentários
   - if @comments.empty?
-    .CommentList.CommentList-empty
+    .CommentList-empty
       | Seja o primeiro a comentar este post!
   - else
     = render @comments
