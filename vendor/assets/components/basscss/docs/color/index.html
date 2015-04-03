@@ -27,8 +27,8 @@
       <div class="relative top-0 bottom-0 right-0 px2 py2 sm-col-3 md-col-2 sm-show" style="min-height:100vh">
           <div class="fixed sm-col-3 md-col-2 top-0 bottom-0 left-0 overflow-auto white bg-slate">
             
-<a href="/" class="h1 button block button-transparent blue mt2">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" width="40" height="16" fill="currentcolor">
+<a href="/" class="inline-block px2 mt2">
+  <svg class="h1 icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" fill="currentcolor">
     <path d="M20 0 L24 8 L40 6 L20 16 L16 8 L0 10 z"/>
   </svg>
 </a>
@@ -186,8 +186,8 @@
             </li>
           
             <li>
-              <a href="/docs/guides/css4" class="button button-small px2 block button-transparent">
-                <span class="block ml1">CSS4 Syntax</span>
+              <a href="/docs/guides/rework" class="button button-small px2 block button-transparent">
+                <span class="block ml1">Using Rework</span>
               </a>
             </li>
           
@@ -279,22 +279,24 @@
       <h1 class="h0 h0-responsive caps m0">
         Color
       </h1>
+      
     </div>
+    
   </div>
 </header>
 
 <div class="px2">
-  <div class="avenir h5 bold mb3">
-    <a href="/" class="button button-small mr1 button-link blue">Home</a>
+  <div class="avenir h5 bold mxn1 mb3">
+    <a href="/" class="button button-narrow button-transparent blue">Home</a>
     
       
       /
-      <a href="/docs" class="button button-small ml1 mr1 button-link blue">
+      <a href="/docs" class="button button-narrow button-transparent blue">
         Docs
       </a>
       
       /
-      <a href="/docs/color" class="button button-small ml1 mr1 button-link ">
+      <a href="/docs/color" class="button button-narrow button-transparent ">
         Color
       </a>
       
@@ -332,13 +334,13 @@
       
         <h2 class="h5 m0">
           basscss-color-base
-          v1.1.2
+          v1.0.1
         </h2>
       
     </div>
-    <div>
-      <a href="//npmjs.com/package/basscss-color-base" class="button button-small mr1 button-link blue">NPM</a>
-      <a href="https://github.com/jxnblk/basscss-color-base" class="button button-small mr1 button-link blue">Github</a>
+    <div class="mxn2">
+      <a href="//npmjs.com/package/basscss-color-base" class="button button-transparent blue">NPM</a>
+      <a href="https://github.com/jxnblk/basscss-color-base" class="button button-transparent blue">Github</a>
     </div>
   </div>
 </header>
@@ -391,7 +393,16 @@
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button mb1 black bg-darken-3&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button mb1 bg-darken-4&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
 </div>
-
+<h2 id="default-variables"><a href="#default-variables">Default Variables</a></h2><p>Uses colors from <a href="//clrs.cc">mrmrs/colors</a> in addition to these defaults:</p>
+<pre>:root {
+  --darken-1: rgba(#000,.0625);
+  --darken-2: rgba(#000,.125);
+  --darken-3: rgba(#000,.25);
+  --darken-4: rgba(#000,.5);
+  --border-color: var(--darken-2);
+  --border-radius: 3px;
+  --border-width: 1px;
+}</pre>
   
 <footer>
   
@@ -401,7 +412,7 @@
       <!--
       <div class="h5 bold">
         2 KB
-        (703 bytes Gzipped)
+        (683 bytes Gzipped)
       </div>
       -->
     </div>
@@ -468,7 +479,7 @@ body {
 }
 
 a {
-  color: var(--link-color, var(--blue) );
+  color: var(--blue);
   text-decoration: none;
 }
 
@@ -478,7 +489,7 @@ a:hover {
 
 pre,
 code {
-  background-color: var(--pre-background-color, var(--silver) );
+  background-color: var(--silver);
   border-radius: var(--border-radius);
 }
 
@@ -491,7 +502,7 @@ hr {
 
 .button {
   color: white;
-  background-color: var(--button-background-color, var(--blue) );
+  background-color: var(--blue);
   border-radius: var(--border-radius);
   transition-duration: .05s;
   transition-timing-function: ease-out;
@@ -521,10 +532,10 @@ hr {
 }
 
 :root {
-  --darken-1: rgba(0,0,0,.0625);
-  --darken-2: rgba(0,0,0,.125);
-  --darken-3: rgba(0,0,0,.25);
-  --darken-4: rgba(0,0,0,.5);
+  --darken-1: rgba(#000,.0625);
+  --darken-2: rgba(#000,.125);
+  --darken-3: rgba(#000,.25);
+  --darken-4: rgba(#000,.5);
   --border-color: var(--darken-2);
   --border-width: 1px;
   --border-radius: 3px;
@@ -549,13 +560,13 @@ hr {
       
         <h2 class="h5 m0">
           basscss-button-outline
-          v0.0.2
+          v0.0.3
         </h2>
       
     </div>
-    <div>
-      <a href="//npmjs.com/package/basscss-button-outline" class="button button-small mr1 button-link blue">NPM</a>
-      <a href="https://github.com/jxnblk/basscss-button-outline" class="button button-small mr1 button-link blue">Github</a>
+    <div class="mxn2">
+      <a href="//npmjs.com/package/basscss-button-outline" class="button button-transparent blue">NPM</a>
+      <a href="https://github.com/jxnblk/basscss-button-outline" class="button button-transparent blue">Github</a>
     </div>
   </div>
 </header>
@@ -580,35 +591,35 @@ hr {
 <p>Use utility styles to change the color.</p>
 <div class="MarkedExample mb2 bg-darken-1 rounded">
   <div class="MarkedExample-rendered p2">
-    <button class="button-outline">Button</button>
-<button class="button-outline navy">Button</button>
-<button class="button-outline blue">Button</button>
-<button class="button-outline aqua">Button</button>
-<button class="button-outline teal">Button</button>
-<button class="button-outline olive">Button</button>
-<button class="button-outline green">Button</button>
-<button class="button-outline lime">Button</button>
-<button class="button-outline yellow">Button</button>
-<button class="button-outline orange">Button</button>
-<button class="button-outline red">Button</button>
-<button class="button-outline maroon">Button</button>
-<button class="button-outline fuchsia">Button</button>
-<button class="button-outline purple">Button</button>
+    <button class="button-outline mb1">Button</button>
+<button class="button-outline mb1 navy">Button</button>
+<button class="button-outline mb1 blue">Button</button>
+<button class="button-outline mb1 aqua">Button</button>
+<button class="button-outline mb1 teal">Button</button>
+<button class="button-outline mb1 olive">Button</button>
+<button class="button-outline mb1 green">Button</button>
+<button class="button-outline mb1 lime">Button</button>
+<button class="button-outline mb1 yellow">Button</button>
+<button class="button-outline mb1 orange">Button</button>
+<button class="button-outline mb1 red">Button</button>
+<button class="button-outline mb1 maroon">Button</button>
+<button class="button-outline mb1 fuchsia">Button</button>
+<button class="button-outline mb1 purple">Button</button>
   </div>
-  <pre class="MarkedExample-code m0 p2 bg-darken-1 rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline navy&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline blue&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline aqua&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline teal&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline olive&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline green&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline lime&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline yellow&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline orange&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline red&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline maroon&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline fuchsia&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline purple&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+  <pre class="MarkedExample-code m0 p2 bg-darken-1 rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 navy&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 blue&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 aqua&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 teal&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 olive&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 green&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 lime&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 yellow&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 orange&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 red&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 maroon&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 fuchsia&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button-outline mb1 purple&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
 </div>
 
   
@@ -730,9 +741,9 @@ hr {
         </h2>
       
     </div>
-    <div>
-      <a href="//npmjs.com/package/basscss-button-transparent" class="button button-small mr1 button-link blue">NPM</a>
-      <a href="https://github.com/jxnblk/basscss-button-transparent" class="button button-small mr1 button-link blue">Github</a>
+    <div class="mxn2">
+      <a href="//npmjs.com/package/basscss-button-transparent" class="button button-transparent blue">NPM</a>
+      <a href="https://github.com/jxnblk/basscss-button-transparent" class="button button-transparent blue">Github</a>
     </div>
   </div>
 </header>
@@ -902,13 +913,13 @@ hr {
       
         <h2 class="h5 m0">
           basscss-colors
-          v1.0.6
+          v1.0.5
         </h2>
       
     </div>
-    <div>
-      <a href="//npmjs.com/package/basscss-colors" class="button button-small mr1 button-link blue">NPM</a>
-      <a href="https://github.com/jxnblk/basscss-colors" class="button button-small mr1 button-link blue">Github</a>
+    <div class="mxn2">
+      <a href="//npmjs.com/package/basscss-colors" class="button button-transparent blue">NPM</a>
+      <a href="https://github.com/jxnblk/basscss-colors" class="button button-transparent blue">Github</a>
     </div>
   </div>
 </header>
@@ -1074,7 +1085,7 @@ The color values used in this module are from <a href="http://clrs.cc/">mrmrs/co
       <!--
       <div class="h5 bold">
         3 KB
-        (876 bytes Gzipped)
+        (875 bytes Gzipped)
       </div>
       -->
     </div>
@@ -1391,10 +1402,10 @@ The color values used in this module are from <a href="http://clrs.cc/">mrmrs/co
 
 :root {
   --black: #222;
-  --darken-1: rgba(0,0,0,.0625);
-  --darken-2: rgba(0,0,0,.125);
-  --darken-3: rgba(0,0,0,.25);
-  --darken-4: rgba(0,0,0,.5);
+  --darken-1: rgba(#000,.0625);
+  --darken-2: rgba(#000,.125);
+  --darken-3: rgba(#000,.25);
+  --darken-4: rgba(#000,.5);
 }</pre>
   
 </footer>
@@ -1420,9 +1431,9 @@ The color values used in this module are from <a href="http://clrs.cc/">mrmrs/co
         </h2>
       
     </div>
-    <div>
-      <a href="//npmjs.com/package/basscss-color-borders" class="button button-small mr1 button-link blue">NPM</a>
-      <a href="https://github.com/jxnblk/basscss-color-borders" class="button button-small mr1 button-link blue">Github</a>
+    <div class="mxn2">
+      <a href="//npmjs.com/package/basscss-color-borders" class="button button-transparent blue">NPM</a>
+      <a href="https://github.com/jxnblk/basscss-color-borders" class="button button-transparent blue">Github</a>
     </div>
   </div>
 </header>
@@ -1592,13 +1603,13 @@ This is useful for things like input and button groups.</p>
       
         <h2 class="h5 m0">
           basscss-color-forms
-          v1.1.1
+          v0.0.3
         </h2>
       
     </div>
-    <div>
-      <a href="//npmjs.com/package/basscss-color-forms" class="button button-small mr1 button-link blue">NPM</a>
-      <a href="https://github.com/jxnblk/basscss-color-forms" class="button button-small mr1 button-link blue">Github</a>
+    <div class="mxn2">
+      <a href="//npmjs.com/package/basscss-color-forms" class="button button-transparent blue">NPM</a>
+      <a href="https://github.com/jxnblk/basscss-color-forms" class="button button-transparent blue">Github</a>
     </div>
   </div>
 </header>
@@ -1698,7 +1709,7 @@ These add focus states that are consistent with the other form elements.</p>
       <!--
       <div class="h5 bold">
         1 KB
-        (584 bytes Gzipped)
+        (471 bytes Gzipped)
       </div>
       -->
     </div>
@@ -1715,104 +1726,89 @@ These add focus states that are consistent with the other form elements.</p>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          37 Declarations
+          35 Declarations
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          26 Properties
+          21 Properties
         </div>
       </div>
     </div>
-    <pre id="basscss-color-forms-css-source" style="max-height:50vh"><span class="hljs-comment">/* Basscss Color Forms */</span>
+    <pre id="basscss-color-forms-css-source" style="max-height:50vh">/* Basscss Color Forms */
 
-<span class="hljs-comment">/*
+.field-light {
+  background-color: white;
+  transition: box-shadow .2s ease;
+  border-style: solid;
+  border-width: var(--border-width);
+  border-color: var(--border-color);
+  border-radius: var(--border-radius);
+}
 
-   COLOR VARIABLES
+.field-light:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 2px rgba(var(--blue),.5);
+}
 
-   - Cool
-   - Warm
-   - Gray Scale
+.field-light:disabled {
+  color: var(--mid-gray);
+  background-color: var(--darken-2);
+}
 
-*/</span>
+.field-light:read-only:not(select) {
+  background-color: var(--darken-2);
+}
 
-<span class="hljs-pseudo">:root</span> <span class="hljs-rules">{
-  <span class="hljs-comment">/* Cool */</span>
-  <span class="hljs-rule"><span class="hljs-attribute">--aqua</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#7fdbff</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--blue</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#0074d9</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--navy</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#001f3f</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--teal</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#39cccc</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--green</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#2ecc40</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--olive</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#3d9970</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--lime</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#01ff70</span></span></span>;
-  <span class="hljs-comment">/* Warm */</span>
-  <span class="hljs-rule"><span class="hljs-attribute">--yellow</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#ffdc00</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--orange</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#ff851b</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--red</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#ff4136</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--fuchsia</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#f012be</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--purple</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#b10dc9</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--maroon</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#85144b</span></span></span>;
-  <span class="hljs-comment">/* Gray scale */</span>
-  <span class="hljs-rule"><span class="hljs-attribute">--white</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#fff</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--silver</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#ddd</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--gray</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#aaa</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--black</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#111</span></span></span>;
-<span class="hljs-rule">}</span></span>
+.field-light:invalid {
+  border-color: var(--red);
+}
 
-<span class="hljs-class">.field-light</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> white</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">transition</span>:<span class="hljs-value"> box-shadow .<span class="hljs-number">2s</span> ease</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border-style</span>:<span class="hljs-value"> solid</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border-width</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-width)</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-color)</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-radius)</span></span>;
-<span class="hljs-rule">}</span></span>
+.field-light.is-success {
+  border-color: var(--green);
+}
 
-<span class="hljs-class">.field-light</span><span class="hljs-pseudo">:focus</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">outline</span>:<span class="hljs-value"> none</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--blue)</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">box-shadow</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-function">color</span>(<span class="hljs-function">var</span>(--blue) <span class="hljs-function">alpha</span>(.<span class="hljs-number">5</span>))</span></span>;
-<span class="hljs-rule">}</span></span>
+.field-light.is-warning {
+  border-color: var(--yellow);
+}
 
-<span class="hljs-class">.field-light</span><span class="hljs-pseudo">:disabled</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--mid-gray)</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">2</span>)</span></span>;
-<span class="hljs-rule">}</span></span>
+.field-light.is-error {
+  border-color: var(--red);
+}
 
-<span class="hljs-class">.field-light</span><span class="hljs-pseudo">:read-only</span><span class="hljs-pseudo">:not(select)</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">2</span>)</span></span>;
-<span class="hljs-rule">}</span></span>
+.radio-light,
+.checkbox-light {
+  transition: box-shadow .2s ease;
+}
 
-<span class="hljs-class">.field-light</span><span class="hljs-pseudo">:invalid</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--red)</span></span>;
-<span class="hljs-rule">}</span></span>
+.radio-light {
+  border-radius: 50%;
+}
 
-<span class="hljs-class">.field-light</span><span class="hljs-class">.is-success</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--green)</span></span>;
-<span class="hljs-rule">}</span></span>
+.radio-light:focus,
+.checkbox-light:focus {
+  outline: none;
+  box-shadow: 0 0 2px rgba(var(--blue),.5);
+}
 
-<span class="hljs-class">.field-light</span><span class="hljs-class">.is-warning</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--yellow)</span></span>;
-<span class="hljs-rule">}</span></span>
-
-<span class="hljs-class">.field-light</span><span class="hljs-class">.is-error</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--red)</span></span>;
-<span class="hljs-rule">}</span></span>
-
-<span class="hljs-class">.radio-light</span>,
-<span class="hljs-class">.checkbox-light</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">transition</span>:<span class="hljs-value"> box-shadow .<span class="hljs-number">2s</span> ease</span></span>;
-<span class="hljs-rule">}</span></span>
-
-<span class="hljs-class">.radio-light</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-number">50%</span></span></span>;
-<span class="hljs-rule">}</span></span>
-
-<span class="hljs-class">.radio-light</span><span class="hljs-pseudo">:focus</span>,
-<span class="hljs-class">.checkbox-light</span><span class="hljs-pseudo">:focus</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">outline</span>:<span class="hljs-value"> none</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">box-shadow</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-function">color</span>(<span class="hljs-function">var</span>(--blue) <span class="hljs-function">alpha</span>(.<span class="hljs-number">5</span>))</span></span>;
-<span class="hljs-rule">}</span></span></pre>
+:root {
+  --blue: #0076df;
+  --red: #f95020;
+  --green: #00cf26;
+  --yellow: #efcc00;
+  --dark-gray: #333;
+  --mid-gray: #777;
+  --light-gray: #ccc;
+  --lighter-gray: #eee;
+  --darken-1: rgba(#000,.0625);
+  --darken-2: rgba(#000,.125);
+  --darken-3: rgba(#000,.25);
+  --darken-4: rgba(#000,.5);
+  --border-color: var(--light-gray);
+  --border-width: 1px;
+  --border-radius: 3px;
+}</pre>
   
 </footer>
 
@@ -1833,13 +1829,13 @@ These add focus states that are consistent with the other form elements.</p>
       
         <h2 class="h5 m0">
           basscss-color-forms-dark
-          v0.1.1
+          v0.0.3
         </h2>
       
     </div>
-    <div>
-      <a href="//npmjs.com/package/basscss-color-forms-dark" class="button button-small mr1 button-link blue">NPM</a>
-      <a href="https://github.com/jxnblk/basscss-color-forms-dark" class="button button-small mr1 button-link blue">Github</a>
+    <div class="mxn2">
+      <a href="//npmjs.com/package/basscss-color-forms-dark" class="button button-transparent blue">NPM</a>
+      <a href="https://github.com/jxnblk/basscss-color-forms-dark" class="button button-transparent blue">Github</a>
     </div>
   </div>
 </header>
@@ -1924,8 +1920,8 @@ These add focus states that are consistent with the other form elements.</p>
       <h2 class="flex-auto">CSS Source</h2>
       <!--
       <div class="h5 bold">
-        1 KB
-        (498 bytes Gzipped)
+        984 bytes
+        (382 bytes Gzipped)
       </div>
       -->
     </div>
@@ -1942,85 +1938,70 @@ These add focus states that are consistent with the other form elements.</p>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          29 Declarations
+          27 Declarations
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          23 Properties
+          19 Properties
         </div>
       </div>
     </div>
-    <pre id="basscss-color-forms-dark-css-source" style="max-height:50vh"><span class="hljs-comment">/* Basscss Color Forms Dark */</span>
+    <pre id="basscss-color-forms-dark-css-source" style="max-height:50vh">/* Basscss Color Forms Dark */
 
-<span class="hljs-comment">/*
+.field-dark {
+  color: white;
+  background-color: var(--darken-3);
+  border: 1px solid var(--darken-1);
+  border-radius: var(--border-radius);
+}
 
-   COLOR VARIABLES
+.field-dark::placeholder {
+  color: rgba(#fff,.75);
+}
 
-   - Cool
-   - Warm
-   - Gray Scale
+.field-dark:focus {
+  outline: 0;
+  border: 1px solid rgba(#fff,.5);
+}
 
-*/</span>
+.field-dark:read-only:not(select) {
+  background-color: rgba(#fff,.25);
+}
 
-<span class="hljs-pseudo">:root</span> <span class="hljs-rules">{
-  <span class="hljs-comment">/* Cool */</span>
-  <span class="hljs-rule"><span class="hljs-attribute">--aqua</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#7fdbff</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--blue</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#0074d9</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--navy</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#001f3f</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--teal</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#39cccc</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--green</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#2ecc40</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--olive</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#3d9970</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--lime</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#01ff70</span></span></span>;
-  <span class="hljs-comment">/* Warm */</span>
-  <span class="hljs-rule"><span class="hljs-attribute">--yellow</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#ffdc00</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--orange</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#ff851b</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--red</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#ff4136</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--fuchsia</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#f012be</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--purple</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#b10dc9</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--maroon</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#85144b</span></span></span>;
-  <span class="hljs-comment">/* Gray scale */</span>
-  <span class="hljs-rule"><span class="hljs-attribute">--white</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#fff</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--silver</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#ddd</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--gray</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#aaa</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">--black</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#111</span></span></span>;
-<span class="hljs-rule">}</span></span>
+.field-dark:invalid {
+  border-color: var(--red);
+}
 
-<span class="hljs-class">.field-dark</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> white</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">3</span>)</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">1px</span> solid <span class="hljs-function">var</span>(--darken-<span class="hljs-number">1</span>)</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-radius, <span class="hljs-number">3px</span>)</span></span>;
-<span class="hljs-rule">}</span></span>
+.field-dark.is-success {
+  border-color: var(--green);
+}
 
-<span class="hljs-class">.field-dark</span><span class="hljs-pseudo">::placeholder</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-function">rgba</span>(<span class="hljs-number">255</span>,<span class="hljs-number">255</span>,<span class="hljs-number">255</span>,.<span class="hljs-number">75</span>)</span></span>;
-<span class="hljs-rule">}</span></span>
+.field-dark.is-warning {
+  border-color: var(--yellow);
+}
 
-<span class="hljs-class">.field-dark</span><span class="hljs-pseudo">:focus</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">outline</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">1px</span> solid <span class="hljs-function">rgba</span>(<span class="hljs-number">255</span>,<span class="hljs-number">255</span>,<span class="hljs-number">255</span>,.<span class="hljs-number">5</span>)</span></span>;
-<span class="hljs-rule">}</span></span>
+.field-dark.is-error {
+  border-color: var(--red);
+}
 
-<span class="hljs-class">.field-dark</span><span class="hljs-pseudo">:read-only</span><span class="hljs-pseudo">:not(select)</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">rgba</span>(<span class="hljs-number">255</span>,<span class="hljs-number">255</span>,<span class="hljs-number">255</span>,.<span class="hljs-number">25</span>)</span></span>;
-<span class="hljs-rule">}</span></span>
-
-<span class="hljs-class">.field-dark</span><span class="hljs-pseudo">:invalid</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--red)</span></span>;
-<span class="hljs-rule">}</span></span>
-
-<span class="hljs-class">.field-dark</span><span class="hljs-class">.is-success</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--green)</span></span>;
-<span class="hljs-rule">}</span></span>
-
-<span class="hljs-class">.field-dark</span><span class="hljs-class">.is-warning</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--yellow)</span></span>;
-<span class="hljs-rule">}</span></span>
-
-<span class="hljs-class">.field-dark</span><span class="hljs-class">.is-error</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--red)</span></span>;
-<span class="hljs-rule">}</span></span></pre>
+:root {
+  --blue: #0076df;
+  --red: #f95020;
+  --green: #00cf26;
+  --yellow: #efcc00;
+  --dark-gray: #333;
+  --mid-gray: #777;
+  --light-gray: #ccc;
+  --lighter-gray: #eee;
+  --darken-1: rgba(#000,.0625);
+  --darken-2: rgba(#000,.125);
+  --darken-3: rgba(#000,.25);
+  --darken-4: rgba(#000,.5);
+  --border-color: var(--light-gray);
+  --border-width: 1px;
+  --border-radius: 3px;
+}</pre>
   
 </footer>
 
@@ -2041,13 +2022,13 @@ These add focus states that are consistent with the other form elements.</p>
       
         <h2 class="h5 m0">
           basscss-input-range
-          v1.1.1
+          v1.1.0
         </h2>
       
     </div>
-    <div>
-      <a href="//npmjs.com/package/basscss-input-range" class="button button-small mr1 button-link blue">NPM</a>
-      <a href="https://github.com/jxnblk/basscss-input-range" class="button button-small mr1 button-link blue">Github</a>
+    <div class="mxn2">
+      <a href="//npmjs.com/package/basscss-input-range" class="button button-transparent blue">NPM</a>
+      <a href="https://github.com/jxnblk/basscss-input-range" class="button button-transparent blue">Github</a>
     </div>
   </div>
 </header>
@@ -2073,7 +2054,7 @@ These add focus states that are consistent with the other form elements.</p>
       <!--
       <div class="h5 bold">
         2 KB
-        (662 bytes Gzipped)
+        (665 bytes Gzipped)
       </div>
       -->
     </div>
@@ -2182,7 +2163,7 @@ input[type=range] {
   --form-field-height: var(--form-field-height, 2.25rem);
   --form-field-padding-y: var(--form-field-padding-y, .5rem);
   --form-field-padding-x: var(--form-field-padding-x, .5rem);
-  --darken-3: rgba(0,0,0, .25);
+  --darken-3: rgba(#000, .25);
   --range-thumb-width: var(--form-field-padding-x);
   --range-thumb-height: calc( var(--form-field-height) - (var(--form-field-padding-y) * 2) );
   --range-track-height: calc( var(--form-field-padding-y) / 2 );
@@ -2209,13 +2190,13 @@ input[type=range] {
       
         <h2 class="h5 m0">
           basscss-progress
-          v1.0.1
+          v1.0.0
         </h2>
       
     </div>
-    <div>
-      <a href="//npmjs.com/package/basscss-progress" class="button button-small mr1 button-link blue">NPM</a>
-      <a href="https://github.com/jxnblk/basscss-progress" class="button button-small mr1 button-link blue">Github</a>
+    <div class="mxn2">
+      <a href="//npmjs.com/package/basscss-progress" class="button button-transparent blue">NPM</a>
+      <a href="https://github.com/jxnblk/basscss-progress" class="button button-transparent blue">Github</a>
     </div>
   </div>
 </header>
@@ -2238,8 +2219,8 @@ input[type=range] {
       <h2 class="flex-auto">CSS Source</h2>
       <!--
       <div class="h5 bold">
-        799 bytes
-        (322 bytes Gzipped)
+        798 bytes
+        (323 bytes Gzipped)
       </div>
       -->
     </div>
@@ -2298,7 +2279,7 @@ input[type=range] {
   --form-field-height: var(--form-field-height, 2.25rem);
   --form-field-padding-y: var(--form-field-padding-y, .5rem);
   --form-field-padding-x: var(--form-field-padding-x, .5rem);
-  --darken-2: rgba(0,0,0, .125);
+  --darken-2: rgba(#000, .125);
 }</pre>
   
 </footer>
@@ -2324,9 +2305,9 @@ input[type=range] {
         </h2>
       
     </div>
-    <div>
-      <a href="//npmjs.com/package/basscss-color-tables" class="button button-small mr1 button-link blue">NPM</a>
-      <a href="https://github.com/jxnblk/basscss-color-tables" class="button button-small mr1 button-link blue">Github</a>
+    <div class="mxn2">
+      <a href="//npmjs.com/package/basscss-color-tables" class="button button-transparent blue">NPM</a>
+      <a href="https://github.com/jxnblk/basscss-color-tables" class="button button-transparent blue">Github</a>
     </div>
   </div>
 </header>
@@ -2478,9 +2459,9 @@ input[type=range] {
         </h2>
       
     </div>
-    <div>
-      <a href="//npmjs.com/package/basscss-background-images" class="button button-small mr1 button-link blue">NPM</a>
-      <a href="https://github.com/jxnblk/basscss-background-images" class="button button-small mr1 button-link blue">Github</a>
+    <div class="mxn2">
+      <a href="//npmjs.com/package/basscss-background-images" class="button button-transparent blue">NPM</a>
+      <a href="https://github.com/jxnblk/basscss-background-images" class="button button-transparent blue">Github</a>
     </div>
   </div>
 </header>
@@ -2634,7 +2615,7 @@ input[type=range] {
 
   <div class="clearfix mxn2 py2">
     
-      <a href="/docs/layout" class="h3 left button button-link blue">
+      <a href="/docs/layout" class="h3 left button button-transparent blue">
         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="currentcolor">
           <path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z "></path>
         </svg>
@@ -2642,7 +2623,7 @@ input[type=range] {
       </a>
     
     
-      <a href="/docs/guides" class="h3 right button button-link blue">
+      <a href="/docs/guides" class="h3 right button button-transparent blue">
         Guides
         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="currentcolor">
           <path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z "></path>
@@ -2664,11 +2645,11 @@ input[type=range] {
       <div>
         <footer class="mt4 border-top">
   <div class="container px2">
-    <div class="flex flex-wrap flex-center caps ">
-      <a href="/" class="h6 button button-small mr2 button-link">Home</a>
-      <a href="/docs" class="h6 button button-small mr2 button-link">Docs</a>
-      <a href="/docs/getting-started" class="h6 button button-small mr2 button-link">Download</a>
-      <a href="//github.com/jxnblk/basscss" class="h6 button button-small button-link">Github</a>
+    <div class="flex flex-wrap flex-center caps mxn2">
+      <a href="/" class="h6 button py2 button-transparent">Home</a>
+      <a href="/docs" class="h6 button py2 button-transparent">Docs</a>
+      <a href="/docs/getting-started" class="h6 button py2 button-transparent">Download</a>
+      <a href="//github.com/jxnblk/basscss" class="h6 button py2 button-transparent">Github</a>
       <div class="flex-grow"></div>
       <div class="flex-none px2 py2 nowrap">
         <p class="h6 bold mb0">

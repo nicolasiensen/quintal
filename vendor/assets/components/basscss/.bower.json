@@ -1,6 +1,6 @@
 {
   "name": "basscss",
-  "version": "5.2.0",
+  "version": "5.1.0",
   "homepage": "https://github.com/jxnblk/basscss",
   "authors": [
     "Brent Jackson <jxnblk@gmail.com>"
@@ -21,14 +21,13 @@
     "test",
     "tests"
   ],
-  "_release": "5.2.0",
+  "_release": "5.1.0",
   "_resolution": {
     "type": "version",
-    "tag": "v5.2.0",
-    "commit": "909bc41df506f9add3f344ec5811f517f89bb166"
+    "tag": "v5.1.0",
+    "commit": "e331e0686672c637af40f61bdf9c05cac769550d"
   },
   "_source": "git://github.com/jxnblk/basscss.git",
-  "_target": "~5.2.0",
-  "_originalSource": "basscss",
-  "_direct": true
+  "_target": "5.1.0",
+  "_originalSource": "basscss"
 }
