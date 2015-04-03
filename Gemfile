@@ -54,3 +54,8 @@ gem 'rails_12factor'
 gem 'puma'
 gem 'kaminari'
 gem "codeclimate-test-reporter", group: :test, require: nil
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-fontawesome'
+  gem 'rails-assets-basscss'
+end

@@ -8,6 +8,7 @@
   }
 
   a {
+    color: $blue;
     font-size: 2em;
     @include transition(all .3s);
     &:hover {
