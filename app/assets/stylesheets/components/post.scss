@@ -7,7 +7,7 @@
   line-height: 1em;
   font-size: 3em;
   a:hover {
-    color: $blue-dark;
+    color: darken($blue, 5%);
     text-decoration: none;
   }
 }
