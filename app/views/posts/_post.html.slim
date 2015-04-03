@@ -3,8 +3,12 @@ article.Post.mb4
     h2.Post-title= link_to post.title, post
     .Post-info
       time= l post.published_at, format: :short
-      |, &nbsp;
-      = link_to post.category.name, category_posts_path(post.category)
+      = link_to category_posts_path(post.category), class: :ml1 do
+        i.fa class=category_icon(post.category.name)
+        | #{post.category.name}
+      = link_to post_path(post, anchor: :comments), class: :ml1 do
+        i.fa.fa-comment
+        | #{post.comments.count}
     - post.tags.each do |tag|
       span.Post-tag= tag.name
 
