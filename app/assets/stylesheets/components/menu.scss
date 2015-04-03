@@ -1,15 +1,16 @@
 .Menu {
   $menu-border-size: 1px;
-  border-bottom: $gray $menu-border-size solid;
+  border-bottom: #eee $menu-border-size solid;
 
   .Menu-title {
     float: left;
     font-family: 'Clicker Script', cursive;
-    font-size: 3em;
+    font-size: 4em;
     line-height: 32px;
 
     a {
       color: #333;
+      background: white;
 
       &:hover {
         text-decoration: none;
@@ -25,7 +26,7 @@
       color: $gray;
       font-weight: 100;
       letter-spacing: .5px;
-      border-bottom: $gray $menu-border-size solid;
+      border-bottom: #efefef $menu-border-size solid;
       padding: .25em 1em;
       display: inline-block;
       margin-bottom: -$menu-border-size;
