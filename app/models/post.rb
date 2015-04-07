@@ -4,4 +4,8 @@ class Post < ActiveRecord::Base
   has_many :comments
   validates :title, :category_id, :slug, presence: true
   validates :slug, uniqueness: true
+
+  def to_param
+    self.slug
+  end
 end
