@@ -1,3 +1,6 @@
+- if @category.present?
+  - set_meta_tags meta_tags_for_category(@category)
+
 = render @posts
 
 hr

@@ -19,4 +19,47 @@ module ApplicationHelper
   def categories
     @categories ||= Category.all
   end
+
+  def meta_tags_for_post post
+    {
+      title: post.title,
+      decription: post.description,
+      og: {
+        title: post.title,
+        url: request.url,
+        image: post.image_url,
+        description: post.description,
+        type: "article"
+      }
+    }
+  end
+
+  def meta_tags_for_category category
+    {
+      title: category.name,
+      decription: "Tudo sobre #{category.name}",
+      og: {
+        title: category.name,
+        url: request.url,
+        image: image_url("fe.jpg"),
+        description: "Tudo sobre #{category.name}",
+        type: "website"
+      }
+    }
+  end
+
+  def default_meta_tags
+    {
+      site: t("meta.title"),
+      description: t("meta.description"),
+      keywords: ["gastronomia", "decoração", "beleza", "estilo de vida", "viagem"],
+      og: {
+        title: t("meta.title"),
+        url: request.url,
+        image: image_url("fe.jpg"),
+        description: t("meta.description"),
+        type: "website"
+      }
+    }
+  end
 end
